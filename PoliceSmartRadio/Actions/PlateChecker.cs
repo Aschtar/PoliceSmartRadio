@@ -101,28 +101,6 @@ namespace PoliceSmartRadio.Actions
                 //determine flags on the vehicle
                 if (!PoliceSmartRadio.IsLSPDFRPluginRunning("British Policing Script", new Version("0.9.0.0")))
                 {
-                    if (Traffic_Policer.API.Functions.GetVehicleRegistrationStatus(vehicleToCheck) == Traffic_Policer.EVehicleDetailsStatus.Expired)
-                    {
-                        Flags += "EXPIRED REGISTRATION ";
-                        AudioFlags.Add("TrafficViolation");
-                    }
-                    else if (Traffic_Policer.API.Functions.GetVehicleRegistrationStatus(vehicleToCheck) == Traffic_Policer.EVehicleDetailsStatus.None)
-                    {
-                        Flags += "NO REGISTRATION ";
-                        AudioFlags.Add("TrafficViolation");
-                    }
-
-                    if (Traffic_Policer.API.Functions.GetVehicleInsuranceStatus(vehicleToCheck) == Traffic_Policer.EVehicleDetailsStatus.Expired)
-                    {
-                        Flags += "EXPIRED INSURANCE ";
-                        AudioFlags.Add("TrafficViolation");
-                    }
-                    else if (Traffic_Policer.API.Functions.GetVehicleInsuranceStatus(vehicleToCheck) == Traffic_Policer.EVehicleDetailsStatus.None)
-                    {
-                        Flags += "NO INSURANCE ";
-                        AudioFlags.Add("TrafficViolation");
-                    }
-
                     if (DriverPersona.Wanted)
                     {
                         AudioFlags.Add("Warrant");

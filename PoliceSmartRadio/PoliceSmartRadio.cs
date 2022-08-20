@@ -69,11 +69,12 @@ namespace PoliceSmartRadio
 
         internal static void Initialise()
         {
-            Game.LogTrivial("PoliceSmartRadio, developed by Albo1125, has been loaded successfully!");
+            Game.LogTrivial("PoliceSmartRadio, by Albo1125 updated by Aschtar for LSPDFR 0.4.9");
+
             GameFiber.StartNew(delegate
             {                
                 GameFiber.Wait(6000);
-                Game.DisplayNotification("~b~PoliceSmartRadio~s~, developed by ~b~Albo1125, ~s~has been loaded ~g~successfully.");
+                Game.DisplayNotification("~b~PoliceSmartRadio~s~, by ~b~Albo1125, ~s~updated by Aschtar for LSPDFR 0.4.9 ~g~loaded successfully.");
 
             });
             MainLogic();

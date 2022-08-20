@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PoliceSmartRadio</RootNamespace>
     <AssemblyName>PoliceSmartRadio</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -51,17 +51,24 @@
     <DocumentationFile>bin\Release\Obfuscation\Confused\PoliceSmartRadio.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Albo1125.Common">
-      <HintPath>..\..\Dependencies\Albo1125.Common.dll</HintPath>
+    <Reference Include="Albo1125.Common, Version=6.6.4.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dlls\Albo1125.Common.dll</HintPath>
     </Reference>
     <Reference Include="British Policing Script">
-      <HintPath>..\..\Dependencies\British Policing Script.dll</HintPath>
+      <HintPath>dlls\British Policing Script.dll</HintPath>
     </Reference>
-    <Reference Include="LSPD First Response">
-      <HintPath>..\..\Dependencies\LSPD First Response.dll</HintPath>
+    <Reference Include="LSPD First Response, Version=0.4.7874.38392, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\LSPD First Response.dll</HintPath>
     </Reference>
-    <Reference Include="RagePluginHookSDK">
-      <HintPath>..\..\Dependencies\RagePluginHookSDK.dll</HintPath>
+    <Reference Include="RAGENativeUI, Version=1.8.1.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\RAGENativeUI.dll</HintPath>
+    </Reference>
+    <Reference Include="RagePluginHookSDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\RagePluginHookSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -76,11 +83,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Traffic Policer">
-      <HintPath>..\..\Dependencies\Traffic Policer.dll</HintPath>
-    </Reference>
     <Reference Include="VocalDispatch">
-      <HintPath>..\..\Dependencies\VocalDispatch.dll</HintPath>
+      <HintPath>dlls\VocalDispatch.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -100,8 +104,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)$(ProjectName).dll" "G:\Program Files\Rockstar Games\Grand Theft Auto V\Plugins\LSPDFR
-copy /Y "$(TargetDir)$(ProjectName).pdb" "G:\Program Files\Rockstar Games\Grand Theft Auto V\Plugins\LSPDFR</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
